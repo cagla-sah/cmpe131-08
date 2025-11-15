@@ -57,7 +57,7 @@ jobs:
         with:
           context: .
           push: true
-          tags: ${{ secrets.DOCKERHUB_USERNAME }}/simple-node-app:${{ github.sha }}
+          tags: ${{ secrets.DOCKERHUB_CAGLASAH }}/simple-node-app:${{ github.sha }}
  # (Optional) The "deploy" job is for Continuous Deployment
   deploy:
 # This job runs only after the image has been successfully pushed
@@ -69,5 +69,5 @@ jobs:
          run: |
            echo "This is where you would add your deployment script."
            echo "For example, you could SSH into your server and run 'docker pull' and 'docker run'."
-           echo "Deploying image: ${{ secrets.DOCKERHUB_USERNAME }}/simple-node-app:${{ github.sha }}"
+           echo "Deploying image: ${{ secrets.DOCKERHUB_CAGLASAH }}/simple-node-app:${{ github.sha }}"
  
